@@ -1,6 +1,7 @@
 :root {
-    --corDeFundo: #0A0E17;
-    --vermelho: red;
+    --corDeFundo--: #0A0E17;
+    --vermelho--: red;
+    --card--: #111827;
 }
 
 /* global */
@@ -13,8 +14,28 @@
 
 body {
 
-    background-color: var(--corDeFundo);
+    /* background-color: var(--corDeFundo--); */
+
     /* min-height: 100vh; */
+
+    margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  
+  /* Fundo tom cimento/estúdio moderno */
+  background: radial-gradient(circle at center, #e2e4e8 0%, #c2c5cc 100%);
+  
+  /* Garante que a página dimensione e centralize corretamente */
+  display: flex;    
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+
+}
+
+main {
+    margin: auto;
+    height: auto;
 }
 
 ul {
@@ -24,8 +45,11 @@ ul {
     position: relative;
     align-self: center;
     list-style: none;
+    flex-wrap: wrap;
 
 }
+
+
 
 h3 {
     display: flex;
@@ -37,7 +61,7 @@ nav {
     margin-top: 1%;
 }
 
-.nav-link,
+.container_lista,
 .subtitulo-inicial,
 .CONTAINER_SUB_PJT,
 .container-pai-lista>ul,
@@ -50,22 +74,28 @@ nav {
 }
 
 /* hover */
-.nav-link:hover,
+
 .item_link:hover {
     text-decoration: underline 5px #0d6efd;
-    font-size: 1.5rem;
     transition: ease-in-out 0.03s;
     color: white;
 
 }
 
-.item_link:hover
- {
+.menu-prinpal:hover {
+    text-decoration: underline 5px #0d6efd;
+}
+
+.menu-prinpal {
+    color: white
+}
+
+.item_link:hover {
     text-decoration: underline 4px solid #0d6efd;
     transform: calc(4px);
     /* color: var(--vermelho); */
     transition: ease-in-out 0.003s;
-    
+
 }
 
 .subtitulo-inicial:hover {
@@ -75,10 +105,12 @@ nav {
     transition: ease-in-out 0.003s;
 }
 
-.texto-apresentacao:hover,.CONTAINER_SUB_PJT:hover{
+.texto-apresentacao:hover,
+.CONTAINER_SUB_PJT:hover {
     text-decoration: underline 4px;
-    cursor:context-menu;
+    cursor: context-menu;
 }
+
 /* containers */
 .container-pai-lista,
 .texto-apresentacao {
@@ -86,6 +118,21 @@ nav {
     position: relative;
     align-items: center;
 
+}
+
+.container-projetos {
+    display: flex;
+    position: relative;
+    /* justify-content: ; */
+
+    flex-wrap: wrap;
+}
+
+.container-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 5%
 }
 
 /* subtitulos */
@@ -101,8 +148,14 @@ nav {
     display: flex;
     position: relative;
     flex-direction: column;
+    flex-wrap: wrap;
+
+
 
 }
+
+
+
 
 .item_lista {
     padding: 4px;
@@ -143,12 +196,106 @@ nav {
 
 }
 
+/* listas */
+ul {
+    list-style: none;
+    text-decoration-style: none;
+
+}
+
+li,
+.nav-item {
+    color: white
+}
+
+/* links */
+a {
+    text-decoration: none;
+    text-decoration-skip-ink: none;
+    color: white;
+    font-weight: bold;
+
+}
+
+.itensbox {
+    /* padding: 10px; */
+    transition: ease-in 0.03s;
+}
+
+/* linhas */
+
+/* .secaoProjetosHr{
+    border: 1px solid white;
+  height: 2%;
+  width: 300px;
+  background:white;
+  width: 100vw;
+  margin-top: 1% ;
+  
+  padding: 2px;
+
+} */
+/* card */
+
+.container-card {
+
+    width: 100%;
+    width: 5rem;
+    background: #0d6efd;
+    height: 10rem;
+    position: relative;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap
+}
+
+.container-submenu {
+    display: flex;
+    position: relative;
+    width: 10rem;
+
+}
+
+
+
+
+/* ========================cor de fundo do container========================= */
+
+.flex {
+
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 500px;
+
+
+}
+
+.flexmenu {
+    display: flex;
+    position: relative;
+    background: var(--card--);
+    margin: 10px;
+    /* background:linear-gradient(45deg, rgb( var(--card--))); */
+    
+}
+
+.projetosFront-end {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.5rem;
+
+}
+
+
 /* ====================== teste de loader================= */
 
 .caixas {
     position: relative;
-    width: 286px;
-    height: 285px;
+    width: 17rem;
+    height: 17rem;
     color: blue;
     background: black;
     background: url('/img/flash.jpg');

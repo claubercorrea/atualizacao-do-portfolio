@@ -1,0 +1,350 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif
+}
+
+body {
+    /* min-height: 100vh; */
+    background: radial-gradient(circle at center, #f5f5f5, #cccccc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+
+}
+
+/* Menu Superior */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+
+}
+
+.portfolio-card {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 650px;
+    background: rgb(255, 255, 255, 0.35);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-bacdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    border-radius: 24px;
+    padding: 40px 50px;
+    box-shadow: 0 20px 50px rgb(0, 0, 0, 0.1), inset 0 0 20px rgb(255, 255, 255, 0.2);
+    /* z-index: 2; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 9rem
+}
+.logo h1{
+    cursor:context-menu;
+
+
+}
+nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: #334155;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+
+    color: #000;
+    text-decoration: 2px underline;
+    font-size: 1rem;
+}
+
+/* Seção do Perfil (Apresentação) */
+
+.hero-section {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 650px;
+    background: rgb(255, 255, 255, 0.35);
+    backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    border-radius: 24px;
+    padding: 40px 50px;
+    box-shadow: 0 20px 50px rgb(0, 0, 0, 1), inset 0 0 20px rgb(255, 255, 255, 0.2);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
+    min-height: 50vh;
+
+}
+
+.texto-perfil {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    max-width: 550px;
+    line-height: 1.4;
+    cursor: context-menu;
+
+}
+
+/* Moldura circular da foto idêntica à imagem */
+
+
+.perfil-foto {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 255, 255, 0.6);
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgb(0, 0, 0, 0.15);
+}
+
+.perfil-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.secao-projetos {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+/* Redes Sociais */
+.titulo-redes-sociais {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: context-menu;
+}
+
+.filter-rede {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 180px;
+
+}
+
+.icone-rede-social {
+    display: flex;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.icone-rede-social:hover,
+.bi-linkedin:hover,
+.bi-github:hover {
+    transform: scale(1.1);
+    color: aqua
+}
+
+
+a.btn-filter {
+    font-size: 1.5rem;
+}
+
+
+.titulo-projeto {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 180px;
+
+}
+
+/* Estilização dos Botões Pretos de Filtro */
+
+.btn-filter {
+    background-color: #1e293b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2, transform 0.;
+
+}
+
+.btn-filter:hover {
+    background: #0f172a;
+    transition: translateY(-1px);
+}
+
+.btn-filter:active {
+    transform: translateY(0);
+}
+
+
+
+
+    /* .hero-section {
+        width: 100%;
+        max-width: 1050px;
+        min-height: 650px;
+        background: rgb(255, 255, 255, 0.35);
+        backdrop-filter: blur(16px) saturate(120%);
+        -webkit-bacdrop-filter: blur(16px) saturate(120%);
+        border: 1px solid rgb(255, 255, 255, 0.4);
+        border-radius: 24px;
+        padding: 40px 50px;
+        box-shadow: 0 20px 50px rgb(0, 0, 0, 0.1), inset 0 0 20px rgb(255, 255, 255, 0.2);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+
+    } */
+
+.container-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+/* Animações */
+.texto-perfil,.hero-section{
+    animation-duration:4s ;
+animation-name: slid-texto-perfil;
+}
+
+.hero-section{
+      animation-duration:2s ;
+animation-name: slid-container-perfil
+}
+
+@keyframes slid-container-perfil{
+
+    from{
+            margin-top:100% ;
+            width: 200%;
+            word-break: pre-line;
+           
+
+    }
+    to{
+        margin-top: 0%;
+        width: 100%;
+        height:  25%;
+    
+    }
+
+}
+@keyframes slid-texto-perfil{
+
+    from{
+            margin-top:100% ;
+            width: 300%;
+            word-break: pre-line;
+            font-size: 2rem;
+
+    }
+    to{
+        margin-top: 0%;
+        width: 100%;
+        width: 50%;
+        font-size:2rem
+    }
+
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+
+
+    .background-blue-bar {
+        display: none;
+    }
+
+    /* Oculta a barra em telas pequenas */
+}
+
+
+
+
+
+/* <button class="btn-filter">Todos</button>
+      <button class="btn-filter">Front-End</button>
+      <button class="btn-filter">Back-End</button>
+      <button class="btn-filter">Full Stack</button>
+      <button class="btn-filter">SQL/Database</button>
+    </div> */
+
+
+/* 
+        <section class="secao-projetos">
+      <h2 class="titulo-projeto">
+        Projetos
+      </h2>
+      <div class="filter-container">
+        <a href="" class="btn-filter"><i class="bi bi-linkedin"></i></a>
+        <a href="" class="btn-filter"> <i class="bi bi-github"></i></a>
+
+
+      </div>
+    </section> */
